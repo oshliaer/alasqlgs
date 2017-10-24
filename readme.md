@@ -7,8 +7,8 @@ API docs are available [here](https://script.google.com/macros/library/versions/
 AlaSQL for Google Apps Script is made available as a script library. This is how you add it to your project:
 1. Select "Resources" > "Libraries..." in the Google Apps Script editor.
 2. Enter the project key (`1XWR3NzQW6fINaIaROhzsxXqRREfKXAdbKoATNbpygoune43oCmez1N8U`) in the "Find a Library" field, and choose "Select". (If you have copied the library, enter instead the project key of your copy.)
-3. Select the highest version number, and choose Lodash as the identifier. (Do not turn on Development Mode unless you know what you are doing. The development version may not work.)
-4. Press Save. You can now use the Lodash library in your code.
+3. Select the highest version number, and choose AlaSQL as the identifier. (Do not turn on Development Mode unless you know what you are doing. The development version may not work.)
+4. Press Save. You can now use the AlaSQL library in your code.
 
 ## Loading the library
 To load AlaSQLGS:
