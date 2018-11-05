@@ -1,0 +1,3 @@
+[submodule "alasql"]
+	path = alasql
+	url = https://github.com/agershun/alasql.git

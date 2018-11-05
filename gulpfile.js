@@ -12,6 +12,10 @@ function concatenation() {
     .pipe(gulp.dest('build'));
 }
 
+function asserts() {
+  return gulp.src(['src/appsscript.json']).pipe(gulp.dest('build'));
+}
+
 gulp.task("clean", clean);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(concatenation)));
+gulp.task('build', gulp.series(clean, gulp.parallel(concatenation, asserts)));
