@@ -1,21 +1,17 @@
 var gulp = require('gulp');
 var del = require('del');
 var concat = require('gulp-concat');
-var gapps = require('node-google-apps-script');
 
-gulp.task('default', ['build'], function (cb) {
-  gapps.upload();
-});
+function clean() {
+  return del(['build/*']);
+}
 
-//
-gulp.task('clean', function () {
-  del([
-    'build/*'
-  ]);
-});
-
-gulp.task('build', ['clean'], function () {
-  return gulp.src(['alasql/dist/alasql.js', 'src/load.gs'])
-    .pipe(concat('alasqlgs.gs'))
+function concatenation() {
+  return gulp.src(['alasql/dist/alasql.js', 'src/load.gs'], { allowEmpty: true })
+    .pipe(concat('alasqlgs.js'))
     .pipe(gulp.dest('build'));
-});
+}
+
+gulp.task("clean", clean);
+
+gulp.task('build', gulp.series(clean, gulp.parallel(concatenation)));
