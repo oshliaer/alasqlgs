@@ -1,5 +1,5 @@
 {
-  "name": "lodashgs",
+  "name": "alasqlgs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oshliaer/lodashgs.git"
+    "url": "git+https://github.com/oshliaer/alasqlgs.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oshliaer/lodashgs/issues"
+    "url": "https://github.com/oshliaer/alasqlgs/issues"
   },
-  "homepage": "https://github.com/oshliaer/lodashgs#readme",
+  "homepage": "https://github.com/oshliaer/alasqlgs#readme",
   "dependencies": {},
   "devDependencies": {
     "del": "^2.2.2",
