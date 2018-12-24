@@ -1,4 +1,5 @@
-//! AlaSQL v0.4.11 | © 2014-2018 Andrey Gershun & Mathias Rangel Wulff | License: MIT
+function loader_(){
+  //! AlaSQL v0.4.11 | © 2014-2018 Andrey Gershun & Mathias Rangel Wulff | License: MIT
 /*
 @module alasql
 @version 0.4.11
@@ -19769,6 +19770,10 @@ return alasql;
 }));
 
 
+}
+
+
 function load() {
+  loader_.call(this);
   return alasql;
 }

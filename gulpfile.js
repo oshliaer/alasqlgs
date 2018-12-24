@@ -1,14 +1,19 @@
 var gulp = require('gulp');
 var del = require('del');
 var concat = require('gulp-concat');
+var fileinclude = require('gulp-file-include')
 
 function clean() {
   return del(['build/*']);
 }
 
 function concatenation() {
-  return gulp.src(['alasql/dist/alasql.js', 'src/load.gs'], { allowEmpty: true })
-    .pipe(concat('alasqlgs.js'))
+  return gulp.src(['src/load.gs'], { allowEmpty: true })
+    // .pipe(concat('alasqlgs.js'))
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
     .pipe(gulp.dest('build'));
 }
 
