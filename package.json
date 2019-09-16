@@ -18,10 +18,10 @@
   "homepage": "https://github.com/oshliaer/alasqlgs#readme",
   "dependencies": {},
   "devDependencies": {
-    "@google/clasp": "^1.6.3",
-    "del": "^2.2.2",
-    "gulp": "^4.0.0",
+    "@google/clasp": "^2.3.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-file-include": "^2.0.1"
+    "gulp-file-include": "^2.1.0"
   }
 }
