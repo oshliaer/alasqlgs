@@ -19,9 +19,17 @@
   "dependencies": {},
   "devDependencies": {
     "@google/clasp": "^2.3.0",
+    "@types/google-apps-script": "0.0.59",
     "del": "^5.1.0",
+    "eslint": "^6.4.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-googleappsscript": "^1.0.3",
+    "eslint-plugin-prettier": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-file-include": "^2.1.0"
+    "gulp-file-include": "^2.1.0",
+    "gulp-rename": "^1.4.0",
+    "prettier": "^1.18.2"
   }
 }

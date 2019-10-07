@@ -1,26 +1,49 @@
-var gulp = require('gulp');
-var del = require('del');
-var concat = require('gulp-concat');
-var fileinclude = require('gulp-file-include')
+const gulp = require('gulp');
+const del = require('del');
+const fileinclude = require('gulp-file-include');
+const rename = require('gulp-rename');
 
+/**
+ * Cleaner the build's folder
+ */
 function clean() {
   return del(['build/*']);
 }
 
-function concatenation() {
-  return gulp.src(['src/load.gs'], { allowEmpty: true })
-    // .pipe(concat('alasqlgs.js'))
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
+/**
+ * Template engine. Converts and delivers to build
+ */
+function substitution() {
+  return gulp
+    .src(['src/loader'], { allowEmpty: true })
+    .pipe(
+      fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      })
+    )
+    .pipe(rename({ suffix: '.js' }))
     .pipe(gulp.dest('build'));
 }
 
-function asserts() {
-  return gulp.src(['src/appsscript.json']).pipe(gulp.dest('build'));
+/**
+ * Copy pure assets to build
+ */
+function assets() {
+  return gulp.src(['src/*.{json,js}']).pipe(gulp.dest('build'));
 }
 
-gulp.task("clean", clean);
+/**
+ * Gulp's task asserts
+ */
+gulp.task('asserts', assets);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(concatenation, asserts)));
+/**
+ * Gulp's task clean
+ */
+gulp.task('clean', clean);
+
+/**
+ * Gulp's task build
+ */
+gulp.task('build', gulp.series(clean, gulp.parallel(substitution, assets)));

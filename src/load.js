@@ -1,6 +1,5 @@
-function loader_(){
-  @@include('./../alasql/dist/alasql.js')
-}
+/* exported load, transformQueryColsNotation */
+/* global loader_, alasql */
 
 /**
  * Bootloader and entry point
@@ -14,11 +13,11 @@ function load() {
 /**
  * Replaces 'ColN' to SQL-compatibility string
  * @public
- * @param {string} s
+ * @param {string} query
  * @return {string}
  */
-function fromColNota(s){
-  return s.replace(/Col(\d+)/g, function(_, d){
+function transformQueryColsNotation(query) {
+  return query.replace(/Col(\d+)/g, function(_, d) {
     return '[' + (d - 1) + ']';
   });
 }

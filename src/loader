@@ -1,0 +1,3 @@
+function loader_(){
+  @@include('./../alasql/dist/alasql.js')
+}

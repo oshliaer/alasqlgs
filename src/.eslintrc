@@ -1,0 +1,20 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "google",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": [
+        "prettier",
+        "googleappsscript"
+    ],
+    "env": {
+        "googleappsscript/googleappsscript": true
+    },
+    "rules": {
+        "prettier/prettier": "error",
+        "no-var": "off",
+        "valid-jsdoc": "off",
+        "require-jsdoc": "off"
+    }
+}
