@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const del = require('del');
 const fileinclude = require('gulp-file-include');
 const rename = require('gulp-rename');
+const replace = require('gulp-replace');
 
 /**
  * Cleaner the build's folder
@@ -23,6 +24,7 @@ function substitution() {
       })
     )
     .pipe(rename({ suffix: '.js' }))
+    .pipe(replace('/* eslint-disable */', ''))
     .pipe(gulp.dest('build'));
 }
 
