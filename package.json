@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp build && eslint ./build/loader.js --no-eslintrc --rule quote-props:error --fix && clasp push"
+    "start": "npx gulp build && eslint ./build/loader.js --no-eslintrc --rule quote-props:error --fix && clasp push"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,6 @@
     "url": "https://github.com/oshliaer/alasqlgs/issues"
   },
   "homepage": "https://github.com/oshliaer/alasqlgs#readme",
-  "dependencies": {},
   "devDependencies": {
     "@google/clasp": "^2.3.0",
     "@types/google-apps-script": "^1.0.20",
