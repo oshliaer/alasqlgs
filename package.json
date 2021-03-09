@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx gulp build && eslint ./build/loader.js --no-eslintrc --rule quote-props:error --fix && clasp push"
+    "start": "npx gulp build && eslint ./build/loader.js --no-eslintrc --rule quote-props:error --fix && clasp push",
+    "samples": "cd samples && npx clasp push"
   },
   "repository": {
     "type": "git",
