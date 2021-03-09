@@ -17,7 +17,16 @@ function load() {
  * @return {string}
  */
 function transformQueryColsNotation(query) {
-  return query.replace(/Col(\d+)/g, function(_, d) {
+  return query.replace(/Col(\d+)/g, function (_, d) {
     return '[' + (d - 1) + ']';
   });
+}
+
+/**
+ *
+ */
+function transformDataMatrixToColsObj(data, index) {
+  return data.map((row) =>
+    row.reduce((p, o, j) => ((p[`data${index + 1}_Col${j + 1}`] = o), p), {})
+  );
 }
