@@ -1,0 +1,15 @@
+{
+  "timeZone": "Europe/Moscow",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "AlaSQLGS",
+        "libraryId": "1XWR3NzQW6fINaIaROhzsxXqRREfKXAdbKoATNbpygoune43oCmez1N8U",
+        "version": "0",
+        "developmentMode": true
+      }
+    ]
+  }
+}
